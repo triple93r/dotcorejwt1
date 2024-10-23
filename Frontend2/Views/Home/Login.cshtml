@@ -1,0 +1,47 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+<h2>Login</h2>
+
+<form id="loginForm">
+    <label for="username">Username:</label>
+    <input type="text" id="username" name="username" required />
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required />
+
+    <button type="submit">Login</button>
+</form>
+
+<script>
+    document.getElementById('loginForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const username = document.getElementById('username').value;
+        const passwd = document.getElementById('password').value;
+
+        // Send login request to the API
+        const response = await fetch('http://localhost:5226/api/auth/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ username, passwd })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            const token = data.token;
+
+            // Store the token in localStorage (or sessionStorage)
+            localStorage.setItem('jwtToken', token);
+
+            alert('Login successful!');
+            // Redirect to the second page after login
+            window.location.href = '/Home/GetData';
+        } else {
+            alert('Login failed. Please check your credentials.');
+        }
+    });
+</script>

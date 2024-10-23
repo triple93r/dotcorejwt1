@@ -1,0 +1,50 @@
+﻿
+@{
+    ViewData["Title"] = "GetData";
+}
+
+<h2>Get Protected Data</h2>
+
+<button id="getDataButton">Get Data</button>
+
+<div id="dataDisplay"></div>
+
+<script>
+    document.getElementById('getDataButton').addEventListener('click', async function () {
+        // Retrieve the stored token from localStorage
+        const token = localStorage.getItem('jwtToken');
+
+        if (!token) {
+            alert('You are not authenticated. Please log in first.');
+            window.location.href = '/Login';
+            return;
+        }
+
+        // Send a request to the protected API endpoint
+        const response = await fetch('http://localhost:5226/api/auth/ustbl', {
+            method: 'GET',
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            document.getElementById('dataDisplay').innerText = JSON.stringify(data, null, 2);
+        } else {
+            alert('Failed to fetch data. Unauthorized.');
+        }
+    });
+</script>
+
+
+<button id="logoutButton">Logout</button>
+
+<script>
+    document.getElementById('logoutButton').addEventListener('click', function () {
+        // Remove the token from localStorage
+        localStorage.removeItem('jwtToken');
+        alert('Logged out successfully.');
+        window.location.href = '/Login';
+    });
+</script>
