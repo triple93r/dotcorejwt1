@@ -5,7 +5,7 @@
 
 <h2>Get Protected Data</h2>
 
-<button id="getDataButton">Get Data</button>
+<button id="getDataButton" class="btn btn-primary">Get Data</button>
 
 <div id="dataDisplay"></div>
 
@@ -45,6 +45,6 @@
         // Remove the token from localStorage
         localStorage.removeItem('jwtToken');
         alert('Logged out successfully.');
-        window.location.href = '/Login';
+        window.location.href = '/Home/Login';
     });
 </script>

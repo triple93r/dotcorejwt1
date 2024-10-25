@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "F:\\RashmiR\\Practice\\JwtApiPractice1\\JwtApiPractice1\\JwtApiPractice1.csproj": {}
+    "E:\\Practice\\Youtube\\dotcorejwt1\\JwtApiPractice1\\JwtApiPractice1.csproj": {}
   },
   "projects": {
-    "F:\\RashmiR\\Practice\\JwtApiPractice1\\JwtApiPractice1\\JwtApiPractice1.csproj": {
+    "E:\\Practice\\Youtube\\dotcorejwt1\\JwtApiPractice1\\JwtApiPractice1.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "F:\\RashmiR\\Practice\\JwtApiPractice1\\JwtApiPractice1\\JwtApiPractice1.csproj",
+        "projectUniqueName": "E:\\Practice\\Youtube\\dotcorejwt1\\JwtApiPractice1\\JwtApiPractice1.csproj",
         "projectName": "JwtApiPractice1",
-        "projectPath": "F:\\RashmiR\\Practice\\JwtApiPractice1\\JwtApiPractice1\\JwtApiPractice1.csproj",
-        "packagesPath": "C:\\Users\\hp\\.nuget\\packages\\",
-        "outputPath": "F:\\RashmiR\\Practice\\JwtApiPractice1\\JwtApiPractice1\\obj\\",
+        "projectPath": "E:\\Practice\\Youtube\\dotcorejwt1\\JwtApiPractice1\\JwtApiPractice1.csproj",
+        "packagesPath": "C:\\Users\\tripl\\.nuget\\packages\\",
+        "outputPath": "E:\\Practice\\Youtube\\dotcorejwt1\\JwtApiPractice1\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\hp\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tripl\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {

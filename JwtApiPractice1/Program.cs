@@ -5,7 +5,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
-var key = Encoding.UTF8.GetBytes("your-thirtytwo-characters-long-secret-key-here");
+//var key = Encoding.UTF8.GetBytes("your-thirtytwo-characters-long-secret-key-here");
 
 builder.Services.AddAuthentication(options =>
 {
@@ -33,7 +33,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowSpecificOrigin",
         builder =>
         {
-            builder.WithOrigins("http://localhost:3000")
+            builder.WithOrigins("http://localhost:5036")
                    .AllowAnyHeader()
                    .AllowAnyMethod()
                    .AllowCredentials();

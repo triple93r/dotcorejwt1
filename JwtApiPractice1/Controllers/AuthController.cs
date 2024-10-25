@@ -79,18 +79,7 @@ namespace JwtApiPractice1.Controllers
                 expires: DateTime.UtcNow.AddHours(1),
                 signingCredentials: creds);
 
-            //var tokenDescriptor = new SecurityTokenDescriptor
-            //{
-            //    Subject = new ClaimsIdentity(new Claim[]
-            //{
-            //    new Claim(ClaimTypes.Name, user.UserName)
-            //}),
-            //    Expires = DateTime.UtcNow.AddHours(1),
-            //    SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key), SecurityAlgorithms.HmacSha256Signature)
-            //};
-
             var tokenHandler = new JwtSecurityTokenHandler();
-            //var token = tokenHandler.CreateToken(tokenDescriptor);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
